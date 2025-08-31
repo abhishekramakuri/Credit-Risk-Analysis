@@ -1,28 +1,88 @@
-# Credit Risk Default Risk using Machine Learning models: Accuracy 97%
+# Credit Risk Analysis & Insights
 
-Credit risk analysis is a crucial task for financial institutions as it enables them to determine the likelihood of default for potential borrowers. In this project, we analyze credit risk using logistic regression and other machine learning models on the American Express dataset. Our aim is to identify the best performing model in predicting credit card defaults and to determine the most important variables in credit risk analysis. Our study shows that XGBoost is the best performing model, with an accuracy of 0.97, precision of 0.91, F1-score of 0.91, AUC value of 0.92. Logistic Regression and other models also performed well, but not as well as XGBoost. Our findings indicate that the most significant variables in predicting credit card defaults are credit score, credit limit utilization, and number of days employed. Furthermore, we find that the age of the borrower is not a significant factor in predicting credit card defaults. This highlights the importance of considering other variables when analyzing credit risk. Our study provides practical implications for financial institutions in improving their credit risk analysis models. By using machine learning techniques such as XGBoost, they can better identify and manage credit risk, thus reducing their losses due to defaults.
+Credit risk analysis is essential for financial institutions to understand the likelihood of default and make informed lending decisions.  
+This project uses the **American Express dataset** to explore borrower characteristics, identify key risk factors, and build **data-driven dashboards and reports** that highlight patterns in credit card defaults.  
 
-## Dataset
+Instead of focusing only on machine learning models, the project emphasizes:
+- **Data cleaning & preprocessing**  
+- **Exploratory Data Analysis (EDA)**  
+- **Visualization of borrower behavior and risk factors**  
+- **Business insights for financial decision-making**  
 
-The data used in this project comes from the **"AmExpert 2021 CODELAB - Machine Learning Hackathon"** competition hosted on the online coding platform, HackerEarth. The dataset can be accessed here, belongs to American Express, a company that provides customers with various payment products and services.
+---
 
-The original dataset consisted of 45528 rows and 19 columns, but for this study, a subset of 30000 rows and 19 columns was used. The target variable of our data frame is “credit_card_default”, which is a binary variable, whose values are 0 and 1. Credit card default risk is the chance that companies or individuals will not be able to return the money lent on time. Data frame has 6 categorical features and 13 numeric features.
+## Dataset Overview
 
-Dataset can be download at: https://www.kaggle.com/datasets/pradip11/amexpert-codelab-2021
+- **Source**: [AmExpert 2021 CODELAB - HackerEarth](https://www.kaggle.com/datasets/pradip11/amexpert-codelab-2021)  
+- **Owner**: American Express  
+- **Rows**: 45,528 (subset of 30,000 used)  
+- **Columns**: 19 (6 categorical, 13 numerical)  
+- **Target Variable**: `credit_card_default` (0 = no default, 1 = default)  
 
-## EDA - Feature Engineering - Modeling
+### Key Fields
+- `credit_score` – Borrower’s creditworthiness  
+- `credit_limit_utilization` – How much of the credit limit is used  
+- `days_employed` – Length of employment  
+- `income_category`, `education_level`, `marital_status`  
 
+---
 
-## Experimental result
-Model         | Accuracy
-------------- | -------------
-Logistic Regression | 0.9464
-Random Forest | 0.9650
-Decision Tree | 0.9663
-LightGBM  | 0.9668
-KNN | 0.9681
-CatBoost | 0.9683
-XGBoost | 0.9734
+## Analysis & Insights
 
-## Further developments
-Future development in this area could focus on comparing the performance of other machine learning models such as Support Vector Machines, Neural Networks, and Deep Learning, among others. This can help in identifying which models perform best in different scenarios and can further improve the accuracy and precision of credit risk analysis. Additionally, future studies can explore the use of alternative data sources such as social media and other online activities to further improve credit risk analysis.
+1. **Data Cleaning**
+   - Handled missing values and outliers  
+   - Encoded categorical features  
+   - Standardized numerical fields  
+
+2. **Exploratory Data Analysis**
+   - Distribution of defaults across age, income, education  
+   - Correlation heatmaps for numeric variables  
+   - Credit utilization vs. default likelihood  
+
+3. **Key Insights**
+   - **High credit limit utilization** strongly correlates with defaults  
+   - **Employment stability** is an important predictor  
+   - **Borrower’s age** is **not significant** for default risk  
+   - Default rates vary significantly by **income and education levels**  
+
+---
+
+## Visualizations
+
+The analysis includes:
+- Default distribution across borrower demographics  
+- Correlation heatmaps of financial indicators  
+- Boxplots & bar charts showing risk drivers  
+- Dashboard-style summary of KPIs for credit risk monitoring  
+
+---
+
+## Predictive Modeling (Optional)
+
+While the main focus is on **data analysis & visualization**, machine learning models were also tested:  
+- Logistic Regression, Random Forest, Decision Tree, LightGBM, CatBoost, XGBoost  
+- **XGBoost achieved the highest accuracy: 97.3%**  
+
+This step demonstrates how advanced analytics can complement data analysis by predicting future borrower defaults.  
+
+---
+
+## Business Impact
+
+- Helps banks & lenders **identify high-risk borrowers early**  
+- Supports **data-driven credit policy decisions**  
+- Reduces potential **financial losses from defaults**  
+- Provides a **dashboard/reporting framework** for ongoing monitoring  
+
+---
+
+## Tools & Tech
+
+- **Languages**: Python  
+- **Libraries**: pandas, numpy, matplotlib, seaborn, scikit-learn, XGBoost, LightGBM, CatBoost  
+- **Visualization**: Matplotlib, Seaborn (with potential Power BI/Tableau extensions)  
+- **Environment**: Jupyter Notebook  
+
+---
+
+## Repository Structure
