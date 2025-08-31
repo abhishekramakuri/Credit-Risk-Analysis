@@ -13,8 +13,6 @@ Instead of focusing only on machine learning models, the project emphasizes:
 
 ## Dataset Overview
 
-- **Source**: [AmExpert 2021 CODELAB - HackerEarth](https://www.kaggle.com/datasets/pradip11/amexpert-codelab-2021)  
-- **Owner**: American Express  
 - **Rows**: 45,528 (subset of 30,000 used)  
 - **Columns**: 19 (6 categorical, 13 numerical)  
 - **Target Variable**: `credit_card_default` (0 = no default, 1 = default)  
@@ -57,7 +55,7 @@ The analysis includes:
 
 ---
 
-## Predictive Modeling (Optional)
+## Predictive Modeling
 
 While the main focus is on **data analysis & visualization**, machine learning models were also tested:  
 - Logistic Regression, Random Forest, Decision Tree, LightGBM, CatBoost, XGBoost  
